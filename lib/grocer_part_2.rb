@@ -22,6 +22,7 @@ def apply_coupons(cart, coupons)
       end
     end
   end
+  puts cart
   return cart
 end
 
@@ -46,8 +47,8 @@ def checkout(cart, coupons)
   sub_total_cart = apply_clearance(consol_coup_cart)
   sum = 0.0
   #binding.pry
-  puts sub_total_cart
-  puts coupons
+  #puts sub_total_cart
+  #puts coupons
   sub_total_cart.each do |item|
     sum += item[:price]*item[:count]
   end
