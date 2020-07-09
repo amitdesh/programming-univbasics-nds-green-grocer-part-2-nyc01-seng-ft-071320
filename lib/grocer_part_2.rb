@@ -35,6 +35,7 @@ def apply_clearance(cart)
       target_item[:price].round(2)
     end
   end
+  return cart
 end
       
 
