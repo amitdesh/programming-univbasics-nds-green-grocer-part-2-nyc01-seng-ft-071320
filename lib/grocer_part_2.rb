@@ -19,7 +19,7 @@ def apply_coupons(cart, coupons)
         discounted_target_item[:count] = coupon[:num]
         cart << discounted_target_item
         target_item[:count] = target_item[:count]%coupon[:num]
-        cart[item] = target_item
+        item = target_item
       end
     end
   end
