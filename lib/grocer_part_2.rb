@@ -46,15 +46,11 @@ def checkout(cart, coupons)
   sum = 0.0
   #puts sub_total_cart
   sub_total_cart.each do |item|
-    item.each do |tags, details|
-      puts tags
-      sum += sub_total_cart[:price]*sub_total_cart[:count]
-    end
+    sum += item[:price]*item[:count]
   end
   if sum > 100.0
     total = sum * cart_discount
   end
-  
   return sum
 end
     
