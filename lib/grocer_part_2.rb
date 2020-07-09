@@ -51,7 +51,7 @@ def checkout(cart, coupons)
   if sum > 100.0
     total = sum * cart_discount
   end
-  return sum
+  return sum.round(2)
 end
     
   # Consult README for inputs and outputs
