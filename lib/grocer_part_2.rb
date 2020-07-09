@@ -18,7 +18,7 @@ def apply_coupons(cart, coupons)
         discounted_target_item[:price] = coupon[:cost]/coupon[:num]
         discounted_target_item[:count] = coupon[:num]
         cart << discounted_target_item
-        target_item[:count] = target_item[:count]-coupon[:num]
+        target_item[:count] = target_item[:count]%coupon[:num]
       end
     end
   end
