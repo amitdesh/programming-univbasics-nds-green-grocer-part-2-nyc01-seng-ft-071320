@@ -45,6 +45,7 @@ def checkout(cart, coupons)
   consol_coup_cart = apply_coupons(consol_cart,coupons)
   sub_total_cart = apply_clearance(consol_coup_cart)
   sum = 0.0
+  binding.pry
   puts sub_total_cart
   puts coupons
   sub_total_cart.each do |item|
