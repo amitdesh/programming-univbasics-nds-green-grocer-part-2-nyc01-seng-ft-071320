@@ -12,7 +12,7 @@ def apply_coupons(cart, coupons)
   coupons.each do |coupon|
     cart.each do |item|
       target_item = find_item_by_name_in_collection(item[:item], cart)
-      if coupon[:item] == target_item[:item]
+      if coupon[:item] == target_item[:item] && target_item[:count] >= coupon[:num]
         discounted_target_item = target_item.clone
         discounted_target_item[:item] = "#{item[:item]} W/COUPON"
         discounted_target_item[:price] = coupon[:cost]/coupon[:num]
