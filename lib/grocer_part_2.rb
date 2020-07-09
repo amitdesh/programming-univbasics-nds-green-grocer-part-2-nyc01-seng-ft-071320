@@ -45,12 +45,13 @@ def checkout(cart, coupons)
   sub_total_cart = apply_clearance(consol_coup_cart)
   sum = 0.0
   puts sub_total_cart
-  #sub_total_cart.each do |items|
-    #sum += sub_total_cart[:price]*sub_total_cart[:count]
+  sub_total_cart.each do |items|
+    sum += sub_total_cart[:price]*sub_total_cart[:count]
   #end
   if sum > 100.0
     total = sum * cart_discount
   end
+  
   return sum
 end
     
